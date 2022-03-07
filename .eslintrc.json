@@ -13,7 +13,7 @@
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parser": "@typescript-eslint/parser",
@@ -26,14 +26,10 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "no-plusplus": "off",
     "no-underscore-dangle": "off",
-    "no-unused-vars": [
-      "warn",
-      {
-        "ignoreRestSiblings": true,
-        "argsIgnorePattern": "res|next|^err"
-      }
-    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "prefer-const": [
       "error",
       {
@@ -86,6 +82,7 @@
     "default-param-last": "off",
     "consistent-return": "off",
     "no-return-assign": ["error", "except-parens"],
+    "@typescript-eslint/no-unsafe-return": "off",
 
     "space-before-function-paren": [
       "error",
@@ -120,7 +117,7 @@
         "less": "never "
       }
     ],
-    "import/prefer-default-export": "warn",
+    "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
 
     "react/jsx-filename-extension": [
@@ -193,7 +190,7 @@
       }
     ],
 
-    "no-void": ["error", { "allowAsStatement": true }],
+    "no-void": ["off", { "allowAsStatement": true }],
 
     "@typescript-eslint/no-floating-promises": [
       "warn",
